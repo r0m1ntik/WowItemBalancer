@@ -1,0 +1,216 @@
+{
+    "title": "WoW Item Balancer - 1.0.0",
+    "search": "Ищи смысл жизни здесь...",
+    "tab": "Вкладка",
+    "classes": [{
+        "name": "Воин",
+        "id": 1,
+        "color": "#C79C6E",
+        "specs": {
+            "arms": {
+                "name": "Оружие",
+                "id": 1,
+                "color": "#C79C6E"
+            },
+            "fury": {
+                "name": "Неистовство",
+                "id": 2,
+                "color": "#C79C6E"
+            },
+            "protection": {
+                "name": "Защита",
+                "id": 3,
+                "color": "#C79C6E"
+            }
+        }
+    }, {
+        "name": "Паладин",
+        "id": 2,
+        "color": "#F58CBA",
+        "specs": {
+            "holy": {
+                "name": "Свет",
+                "id": 4,
+                "color": "#F58CBA"
+            },
+            "protection": {
+                "name": "Защита",
+                "id": 5,
+                "color": "#F58CBA"
+            },
+            "retribution": {
+                "name": "Воздаяние",
+                "id": 6,
+                "color": "#F58CBA"
+            }
+        }
+    },{
+        "name": "Охотник",
+        "id": 3,
+        "color": "#ABD473",
+        "specs": {
+            "beast-mastery": {
+                "name": "Повелитель зверей",
+                "id": 7,
+                "color": "#ABD473"
+            },
+            "marksmanship": {
+                "name": "Стрельба",
+                "id": 8,
+                "color": "#ABD473"
+            },
+            "survival": {
+                "name": "Выживание",
+                "id": 9,
+                "color": "#ABD473"
+            }
+        }
+    },{
+        "name": "Разбойник",
+        "id": 4,
+        "color": "#FFF569",
+        "specs": {
+            "assassination": {
+                "name": "Ликвидация",
+                "id": 10,
+                "color": "#FFF569"
+            },
+            "combat": {
+                "name": "Бой",
+                "id": 11,
+                "color": "#FFF569"
+            },
+            "subtlety": {
+                "name": "Скрытность",
+                "id": 12,
+                "color": "#FFF569"
+            }
+        }
+    },{
+        "name": "Жрец",
+        "id": 5,
+        "color": "#FFFFFF",
+        "specs": {
+            "discipline": {
+                "name": "Послушание",
+                "id": 13,
+                "color": "#FFFFFF"
+            },
+            "holy": {
+                "name": "Свет",
+                "id": 14,
+                "color": "#FFFFFF"
+            },
+            "shadow": {
+                "name": "Тьма",
+                "id": 15,
+                "color": "#FFFFFF"
+            }
+        }
+    }, {
+        "name": "Рыцарь смерти",
+        "id": 6,
+        "color": "#C41F3B",
+        "specs": {
+            "blood": {
+                "name": "Кровь",
+                "id": 16,
+                "color": "#C41F3B"
+            },
+            "frost": {
+                "name": "Лед",
+                "id": 17,
+                "color": "#C41F3B"
+            },
+            "unholy": {
+                "name": "Нечестивость",
+                "id": 18,
+                "color": "#C41F3B"
+            }
+        }
+    },{
+        "name": "Шаман",
+        "id": 7,
+        "color": "#0070DE",
+        "specs": {
+            "elemental": {
+                "name": "Elemental",
+                "id": 19,
+                "color": "#0070DE"
+            },
+            "enhancement": {
+                "name": "Enhancement",
+                "id": 20,
+                "color": "#0070DE"
+            },
+            "restoration": {
+                "name": "Restoration",
+                "id": 21,
+                "color": "#0070DE"
+            }
+        }
+    },{
+        "name": "Маг",
+        "id": 8,
+        "color": "#69CCF0",
+        "specs": {
+            "arcane": {
+                "name": "Arcane",
+                "id": 22,
+                "color": "#69CCF0"
+            },
+            "fire": {
+                "name": "Fire",
+                "id": 23,
+                "color": "#69CCF0"
+            },
+            "frost": {
+                "name": "Лед",
+                "id": 24,
+                "color": "#69CCF0"
+            }
+        }
+    },{
+        "name": "Чернокнижник",
+        "id": 9,
+        "color": "#9482C9",
+        "specs": {
+            "affliction": {
+                "name": "Affliction",
+                "id": 25,
+                "color": "#9482C9"
+            },
+            "demonology": {
+                "name": "Demonology",
+                "id": 26,
+                "color": "#9482C9"
+            },
+            "destruction": {
+                "name": "Destruction",
+                "id": 27,
+                "color": "#9482C9"
+            }
+        }
+    }, {
+        "name": "Друид",
+        "id": 11,
+        "color": "#FF7D0A",
+        "specs": {
+            "balance": {
+                "name": "Balance",
+                "id": 31,
+                "color": "#FF7D0A"
+            },
+            "feral": {
+                "name": "Feral",
+                "id": 32,
+                "color": "#FF7D0A"
+            },
+            "restoration": {
+                "name": "Restoration",
+                "id": 34,
+                "color": "#FF7D0A"
+            }
+        }
+    }]
+}
