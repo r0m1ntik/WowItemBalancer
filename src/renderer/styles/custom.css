@@ -1,0 +1,31 @@
+.list-group-item {
+    /* Default styles */
+    transition: background-color 0.2s;
+}
+
+.list-group-item.hovered {
+    /* Hover effect styles */
+    background-color: #b8b6b8;
+    cursor: pointer;
+}
+
+.specs-container {
+    margin-top: 5px;
+    padding-left: -20px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.spec-icon {
+    justify-content: center;
+}
+
+.spec-name {
+    font-weight: bold;
+    padding-left: 2.5px;
+}

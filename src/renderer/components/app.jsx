@@ -5,6 +5,7 @@ import { createRoot } from "react-dom/client";
 import Header from './HeaderContainer/HeaderContainer.jsx';
 import LeftContainer from './LeftContainer/LeftContainer.jsx';
 import MainContainer from './MainContainer/MainContainer.jsx';
+import FooterContainer from './FooterContainer/FooterContainer.jsx';
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -20,6 +21,7 @@ function App() {
                     <MainContainer currentLanguage={currentLanguage} setLanguage={setLanguage}/>
                 </div>
             </div>
+            <FooterContainer />
         </StrictMode>
     )
 }

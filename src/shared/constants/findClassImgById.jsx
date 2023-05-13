@@ -23,6 +23,6 @@ const classImages = {
     11: druid,
 };
 
-export function findClassImgById(id) {
+export function FindClassImgById(id) {
     return classImages[id] || unknown;
 }
