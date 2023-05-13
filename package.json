@@ -11,6 +11,12 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "keywords": [],
   "author": {
     "name": "r0m1ntik",
