@@ -1,223 +1,232 @@
 {
     "title": "WoW Item Balancer - 1.0.0",
-    "search": "Search for the meaning of life here...",
+    "search": "Search for meaning of life here...",
     "tab": "Tab",
+    "mainMenu": "Main Menu",
+    "documentation": "Documentation",
+    "help": "Help",
+    "settings": "Settings",
+    "about": "About the Application",
     "classes": [
         {
             "name": "Warrior",
             "id": 1,
             "color": "#C79C6E",
-            "specs": {
-                "arms": {
+            "specs": [
+                {
                     "name": "Arms",
-                    "id": 1,
+                    "id": 71,
                     "color": "#C79C6E"
                 },
-                "fury": {
+                {
                     "name": "Fury",
-                    "id": 2,
+                    "id": 72,
                     "color": "#C79C6E"
                 },
-                "protection": {
+                {
                     "name": "Protection",
-                    "id": 3,
+                    "id": 73,
                     "color": "#C79C6E"
                 }
-            }
-        }, {
+            ]
+        },
+        {
             "name": "Paladin",
             "id": 2,
             "color": "#F58CBA",
-            "specs": {
-                "holy": {
+            "specs": [
+                {
                     "name": "Holy",
-                    "id": 4,
+                    "id": 65,
                     "color": "#F58CBA"
                 },
-                "protection": {
+                {
                     "name": "Protection",
-                    "id": 5,
+                    "id": 66,
                     "color": "#F58CBA"
                 },
-                "retribution": {
+                {
                     "name": "Retribution",
-                    "id": 6,
+                    "id": 70,
                     "color": "#F58CBA"
                 }
-            }
-        },{
+            ]
+        },
+        {
             "name": "Hunter",
             "id": 3,
             "color": "#ABD473",
-            "specs": {
-                "beast-mastery": {
+            "specs": [
+                {
                     "name": "Beast Mastery",
-                    "id": 7,
+                    "id": 253,
                     "color": "#ABD473"
                 },
-                "marksmanship": {
+                {
                     "name": "Marksmanship",
-                    "id": 8,
+                    "id": 254,
                     "color": "#ABD473"
                 },
-                "survival": {
+                {
                     "name": "Survival",
-                    "id": 9,
+                    "id": 255,
                     "color": "#ABD473"
                 }
-            }
-        },{
+            ]
+        },
+        {
             "name": "Rogue",
             "id": 4,
             "color": "#FFF569",
-            "specs": {
-                "assassination": {
+            "specs": [
+                {
                     "name": "Assassination",
-                    "id": 10,
+                    "id": 259,
                     "color": "#FFF569"
                 },
-                "combat": {
+                {
                     "name": "Combat",
-                    "id": 11,
+                    "id": 260,
                     "color": "#FFF569"
                 },
-                "subtlety": {
+                {
                     "name": "Subtlety",
-                    "id": 12,
+                    "id": 261,
                     "color": "#FFF569"
                 }
-            }
-        },{
+            ]
+        },
+        {
             "name": "Priest",
             "id": 5,
             "color": "#FFFFFF",
-            "specs": {
-                "discipline": {
+            "specs": [
+                {
                     "name": "Discipline",
-                    "id": 13,
+                    "id": 256,
                     "color": "#FFFFFF"
                 },
-                "holy": {
+                {
                     "name": "Holy",
-                    "id": 14,
+                    "id": 257,
                     "color": "#FFFFFF"
                 },
-                "shadow": {
+                {
                     "name": "Shadow",
-                    "id": 15,
+                    "id": 258,
                     "color": "#FFFFFF"
                 }
-            }
-        }, {
+            ]
+        },
+        {
             "name": "Death Knight",
             "id": 6,
             "color": "#C41F3B",
-            "specs": {
-                "blood": {
+            "specs": [
+                {
                     "name": "Blood",
-                    "id": 16,
+                    "id": 250,
                     "color": "#C41F3B"
                 },
-                "frost": {
+                {
                     "name": "Frost",
-                    "id": 17,
+                    "id": 251,
                     "color": "#C41F3B"
                 },
-                "unholy": {
+                {
                     "name": "Unholy",
-                    "id": 18,
+                    "id": 252,
                     "color": "#C41F3B"
                 }
-            }
-        },{
+            ]
+        },
+        {
             "name": "Shaman",
             "id": 7,
             "color": "#0070DE",
-            "specs": {
-                "elemental": {
+            "specs": [
+                {
                     "name": "Elemental",
-                    "id": 19,
+                    "id": 262,
                     "color": "#0070DE"
                 },
-                "enhancement": {
+                {
                     "name": "Enhancement",
-                    "id": 20,
+                    "id": 263,
                     "color": "#0070DE"
                 },
-                "restoration": {
+                {
                     "name": "Restoration",
-                    "id": 21,
+                    "id": 264,
                     "color": "#0070DE"
                 }
-            }
-        },{
+            ]
+        },
+        {
             "name": "Mage",
             "id": 8,
             "color": "#69CCF0",
-            "specs": {
-                "arcane": {
+            "specs": [
+                {
                     "name": "Arcane",
-                    "id": 22,
+                    "id": 62,
                     "color": "#69CCF0"
                 },
-                "fire": {
+                {
                     "name": "Fire",
-                    "id": 23,
+                    "id": 63,
                     "color": "#69CCF0"
                 },
-                "frost": {
+                {
                     "name": "Frost",
-                    "id": 24,
+                    "id": 64,
                     "color": "#69CCF0"
                 }
-            }
-        },{
+            ]
+        },
+        {
             "name": "Warlock",
             "id": 9,
             "color": "#9482C9",
-            "specs": {
-                "affliction": {
+            "specs": [
+                {
                     "name": "Affliction",
-                    "id": 25,
+                    "id": 265,
                     "color": "#9482C9"
                 },
-                "demonology": {
+                {
                     "name": "Demonology",
-                    "id": 26,
+                    "id": 266,
                     "color": "#9482C9"
                 },
-                "destruction": {
+                {
                     "name": "Destruction",
-                    "id": 27,
+                    "id": 267,
                     "color": "#9482C9"
                 }
-            }
-        }, {
+            ]
+        },
+        {
             "name": "Druid",
             "id": 11,
             "color": "#FF7D0A",
-            "specs": {
-                "balance": {
+            "specs": [
+                {
                     "name": "Balance",
-                    "id": 31,
+                    "id": 102,
                     "color": "#FF7D0A"
                 },
-                "feral": {
+                {
                     "name": "Feral",
-                    "id": 32,
+                    "id": 103,
                     "color": "#FF7D0A"
                 },
-                "guardian": {
-                    "name": "Guardian",
-                    "id": 33,
-                    "color": "#FF7D0A"
-                },
-                "restoration": {
+                {
                     "name": "Restoration",
-                    "id": 34,
+                    "id": 104,
                     "color": "#FF7D0A"
                 }
-            }
+            ]
         }
     ]
 }

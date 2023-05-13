@@ -5,6 +5,50 @@ import { FindSpecImgById } from '../../../shared/constants/FindSpecImgById.jsx';
 
 import '../../styles/custom.css'
 
+function SearchContainer({search}) {
+    return (
+        <ul className="list-group" id="123">     
+            <li className="list-group-header">
+                <input className="form-control" type="text" placeholder={search} />
+            </li>
+        </ul>
+    )
+}
+
+function LeftConainerButtonMenu({ currentLanguage }) {
+    const data = GetLocaleData({currentLanguage});
+    return (
+        <nav className="nav-group">
+            <h5 className="nav-group-title">{data.mainMenu}</h5>
+            <span className="nav-group-item">
+                <span className="icon icon-info"></span>
+                {data.about}
+            </span>            
+            <a className="nav-group-item active">
+                <span className="icon icon-docs"></span>
+                {data.documentation}
+            </a>
+            <span className="nav-group-item">
+                <span className="icon icon-cog"></span>
+                {data.settings}
+            </span>            
+            <span className="nav-group-item">
+                <span className="icon icon-help"></span>
+                {data.help}
+            </span>
+        </nav>
+    )
+}
+
+function LeftContainerInformation({ currentLanguage, search }) {
+    return (
+        <>
+            <SearchContainer search={search} />
+            <LeftConainerButtonMenu currentLanguage={currentLanguage} />
+        </>
+    )
+}
+
 function ClassItem({ id, name, specs }) {
     // Состояние
     const [isHovered, setIsHovered] = useState(false);
@@ -51,8 +95,8 @@ function ClassItem({ id, name, specs }) {
                 className="img-circle media-object pull-left"
                 src={FindClassImgById(id)}
                 alt={name}
-                width="24"
-                height="24"
+                width="18"
+                height="18"
             />
             <div className="media-body">
                 <strong>{name}</strong>
@@ -66,10 +110,8 @@ function LeftContainer({ currentLanguage }) {
     const data = GetLocaleData({ currentLanguage });
     return (
         <div className="pane pane-sm sidebar">
+            <LeftContainerInformation currentLanguage={currentLanguage} search={data.search} />     
             <ul className="list-group">
-                <li className="list-group-header">
-                    <input className="form-control" type="text" placeholder={data.search} />
-                </li>
                 {Object.keys(data.classes).map((classKey) => (
                 <ClassItem key={data.classes[classKey].id} name={data.classes[classKey].name} id={data.classes[classKey].id} specs={data.classes[classKey].specs} />
                 ))}

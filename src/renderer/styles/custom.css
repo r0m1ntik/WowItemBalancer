@@ -3,10 +3,14 @@
     transition: background-color 0.2s;
 }
 
+.list-group:last-child {
+    margin-top: 12px;
+    border-top: 1px solid #dcdfe1;
+    border-bottom: 1px solid #dcdfe1;
+}
+
 .list-group-item.hovered {
-    /* Hover effect styles */
-    background-color: #b8b6b8;
-    cursor: pointer;
+    background-color: #dcdfe1;
 }
 
 .specs-container {
@@ -28,4 +32,5 @@
 .spec-name {
     font-weight: bold;
     padding-left: 2.5px;
+    cursor: pointer;
 }

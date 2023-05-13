@@ -6,11 +6,11 @@ function MainContainer({ currentLanguage, setLanguage }) {
     const data = GetLocaleData({currentLanguage});
 
     // Табы
-    const [tabs, setTabs] = useState([{ id: 1, title: `${data.tab} 1`}]);
+    const [tabs, setTabs] = useState([]);
     // Счетчик табов
-    const [nextTabId, setNextTabId] = useState(2);
+    const [nextTabId, setNextTabId] = useState(1);
     // Активный таб
-    const [activeTabId, setActiveTabId] = useState(1);
+    const [activeTabId, setActiveTabId] = useState(0);
 
     // Добавляем таб
     const addTab = () => {

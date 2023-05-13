@@ -2,6 +2,11 @@
     "title": "WoW Item Balancer - 1.0.0",
     "search": "Ищи смысл жизни здесь...",
     "tab": "Вкладка",
+    "mainMenu": "Главное меню",
+    "documentation": "Документация",
+    "help": "Помощь",
+    "settings": "Настройки",
+    "about": "О приложении",
     "classes": [{
         "name": "Воин",
         "id": 1,
