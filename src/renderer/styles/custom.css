@@ -32,7 +32,6 @@
     font-weight: 350;
     font-size: 14px;
     padding-left: 2.5px;
-    cursor: pointer;
 }
 
 .class-name {
@@ -41,6 +40,10 @@
     padding-left: 2.5px;
     cursor: pointer;
     color: #666;
+}
+
+.media-body {
+    cursor: pointer;
 }
 
 .menu-icon-lang {
@@ -96,4 +99,10 @@
     justify-content: center;
     align-items: center;
     height: 95%;
+}
+
+.footerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

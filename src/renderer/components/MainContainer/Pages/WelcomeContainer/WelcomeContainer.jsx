@@ -3,22 +3,34 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Alert from 'react-bootstrap/Alert';
+import { Row, Col } from "react-bootstrap";
 
-import img1 from "../../../../../assets/welcome/crafting.png";
-import img2 from "../../../../../assets/welcome/shoes.png";
-import img3 from "../../../../../assets/welcome/weapon.png";
+const img1 = require("../../../../../assets/welcome/crafting.png");
+const img2 = require("../../../../../assets/welcome/shoes.png");
+const img3 = require("../../../../../assets/welcome/weapon.png");
 
-const WelcomeContainer = () => {
+const WelcomeContainer = React.memo(() => {
     return (
         <div className="welcome-container">
-            <Container fluid>
-                <Alert key='secondary' variant='secondary'>
-                    Добро пожаловать! Мы рады видеть вас здесь.<br />
-                    <span style={{ textAlign: 'center' }}>Пожалуйста, выберите один из пунктов меню, чтобы начать работу.</span>
-                </Alert>
+            <Container fluid style={{ marginTop: '40px' }}>
+                <Row>
+                    <Col>
+                        <Alert key='success' variant='success'>
+                            Добро пожаловать! <br />
+                        </Alert>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Alert key='secondary' variant='secondary'>
+                            1 - Для начало работы выберите один из пунктов меню.<br />
+                            2 - После выбора пункта меню, вам будет предложено открыть новую вкладку [+]<br />
+                        </Alert>
+                    </Col>
+                </Row>
                 <CardGroup>
                     <Card>
-                        <Card.Img variant="top" src={img1} />
+                        <Card.Img className="maximize-img" variant="top" src={img1.default} />
                         <Card.Body>
                             <Card.Title>Создание предметов под баланс в World of Warcraft 3.3.5</Card.Title>
                             <Card.Text>
@@ -27,7 +39,7 @@ const WelcomeContainer = () => {
                         </Card.Body>
                     </Card>
                     <Card>
-                        <Card.Img variant="top" src={img2} />
+                        <Card.Img className="maximize-img" variant="top" src={img2.default} />
                         <Card.Body>
                             <Card.Title>Генерация статистик в сете с учетом одного предмета</Card.Title>
                             <Card.Text>
@@ -36,7 +48,7 @@ const WelcomeContainer = () => {
                         </Card.Body>
                     </Card>
                     <Card>
-                        <Card.Img variant="top" src={img3} />
+                        <Card.Img className="maximize-img" variant="top" src={img3.default} />
                         <Card.Body>
                             <Card.Title>Генерация статистик оружия для каждого класса</Card.Title>
                             <Card.Text>
@@ -48,6 +60,6 @@ const WelcomeContainer = () => {
             </Container>
         </div>
     );
-}
+});
 
 export default WelcomeContainer;

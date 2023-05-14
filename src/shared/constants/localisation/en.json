@@ -7,6 +7,8 @@
     "help": "Help",
     "settings": "Settings",
     "about": "About the Application",
+    "welcome": "Welcome",
+    "error": "Error",
     "classes": [
         {
             "name": "Warrior",
@@ -15,18 +17,15 @@
             "specs": [
                 {
                     "name": "Arms",
-                    "id": 71,
-                    "color": "#C79C6E"
+                    "id": 71
                 },
                 {
                     "name": "Fury",
-                    "id": 72,
-                    "color": "#C79C6E"
+                    "id": 72
                 },
                 {
                     "name": "Protection",
-                    "id": 73,
-                    "color": "#C79C6E"
+                    "id": 73
                 }
             ]
         },
@@ -37,18 +36,15 @@
             "specs": [
                 {
                     "name": "Holy",
-                    "id": 65,
-                    "color": "#F58CBA"
+                    "id": 65
                 },
                 {
                     "name": "Protection",
-                    "id": 66,
-                    "color": "#F58CBA"
+                    "id": 66
                 },
                 {
                     "name": "Retribution",
-                    "id": 70,
-                    "color": "#F58CBA"
+                    "id": 70
                 }
             ]
         },
@@ -59,18 +55,15 @@
             "specs": [
                 {
                     "name": "Beast Mastery",
-                    "id": 253,
-                    "color": "#ABD473"
+                    "id": 253
                 },
                 {
                     "name": "Marksmanship",
-                    "id": 254,
-                    "color": "#ABD473"
+                    "id": 254
                 },
                 {
                     "name": "Survival",
-                    "id": 255,
-                    "color": "#ABD473"
+                    "id": 255
                 }
             ]
         },
@@ -81,40 +74,34 @@
             "specs": [
                 {
                     "name": "Assassination",
-                    "id": 259,
-                    "color": "#FFF569"
+                    "id": 259
                 },
                 {
                     "name": "Combat",
-                    "id": 260,
-                    "color": "#FFF569"
+                    "id": 260
                 },
                 {
                     "name": "Subtlety",
-                    "id": 261,
-                    "color": "#FFF569"
+                    "id": 261
                 }
             ]
         },
         {
             "name": "Priest",
             "id": 5,
-            "color": "#FFFFFF",
+            "color": "#eae7e7",
             "specs": [
                 {
                     "name": "Discipline",
-                    "id": 256,
-                    "color": "#FFFFFF"
+                    "id": 256
                 },
                 {
                     "name": "Holy",
-                    "id": 257,
-                    "color": "#FFFFFF"
+                    "id": 257
                 },
                 {
                     "name": "Shadow",
-                    "id": 258,
-                    "color": "#FFFFFF"
+                    "id": 258
                 }
             ]
         },
@@ -125,18 +112,15 @@
             "specs": [
                 {
                     "name": "Blood",
-                    "id": 250,
-                    "color": "#C41F3B"
+                    "id": 250
                 },
                 {
                     "name": "Frost",
-                    "id": 251,
-                    "color": "#C41F3B"
+                    "id": 251
                 },
                 {
                     "name": "Unholy",
-                    "id": 252,
-                    "color": "#C41F3B"
+                    "id": 252
                 }
             ]
         },
@@ -147,18 +131,15 @@
             "specs": [
                 {
                     "name": "Elemental",
-                    "id": 262,
-                    "color": "#0070DE"
+                    "id": 262
                 },
                 {
                     "name": "Enhancement",
-                    "id": 263,
-                    "color": "#0070DE"
+                    "id": 263
                 },
                 {
                     "name": "Restoration",
-                    "id": 264,
-                    "color": "#0070DE"
+                    "id": 264
                 }
             ]
         },
@@ -169,18 +150,15 @@
             "specs": [
                 {
                     "name": "Arcane",
-                    "id": 62,
-                    "color": "#69CCF0"
+                    "id": 62
                 },
                 {
                     "name": "Fire",
-                    "id": 63,
-                    "color": "#69CCF0"
+                    "id": 63
                 },
                 {
                     "name": "Frost",
-                    "id": 64,
-                    "color": "#69CCF0"
+                    "id": 64
                 }
             ]
         },
@@ -191,18 +169,15 @@
             "specs": [
                 {
                     "name": "Affliction",
-                    "id": 265,
-                    "color": "#9482C9"
+                    "id": 265
                 },
                 {
                     "name": "Demonology",
-                    "id": 266,
-                    "color": "#9482C9"
+                    "id": 266
                 },
                 {
                     "name": "Destruction",
-                    "id": 267,
-                    "color": "#9482C9"
+                    "id": 267
                 }
             ]
         },
@@ -213,18 +188,15 @@
             "specs": [
                 {
                     "name": "Balance",
-                    "id": 102,
-                    "color": "#FF7D0A"
+                    "id": 102
                 },
                 {
                     "name": "Feral",
-                    "id": 103,
-                    "color": "#FF7D0A"
+                    "id": 103
                 },
                 {
                     "name": "Restoration",
-                    "id": 104,
-                    "color": "#FF7D0A"
+                    "id": 104
                 }
             ]
         }

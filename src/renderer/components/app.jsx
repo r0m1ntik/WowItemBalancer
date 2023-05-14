@@ -1,4 +1,4 @@
-import React, { StrictMode, useState } from 'react';
+import React, { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from "react-dom/client";
 
 import Header from './HeaderContainer/HeaderContainer.jsx';
@@ -23,44 +23,79 @@ import DocumentationContainer from './MainContainer/Pages/DocumentationContainer
 import SettingContainer from './MainContainer/Pages/SettingContainer/SettingContainer.jsx';
 import HelpContainer from './MainContainer/Pages/HelpContainer/HelpContainer.jsx';
 
-const components = [
-    { name: 'Welcome', component: WelcomeContainer },
-    { name: 'Warrior', component: WarriorContainer },
-    { name: 'Paladin', component: PaladinContainer },
-    { name: 'Hunter', component: HunterContainer },
-    { name: 'Rogue', component: RogueContainer },
-    { name: 'Priest', component: PriestContainer },
-    { name: 'DeathKnight', component: DeathKnightContainer },
-    { name: 'Shaman', component: ShamanContainer },
-    { name: 'Mage', component: MageContainer },
-    { name: 'Warlock', component: WarlockContainer },
-    { name: 'Error', component: ErrorContainer },
-    { name: 'Druid', component: DruidContainer },
-    { name: 'About', component: AboutContainer },
-    { name: 'Documentation', component: DocumentationContainer },
-    { name: 'Setting', component: SettingContainer },
-    { name: 'Help', component: HelpContainer }
-];
-
 const App = () => {
+
     const [currentLanguage, setLanguage] = useState('en');
-    const [activeComponent, setActiveComponent] = useState(0);
+    const components = [
+        { name: 'Welcome', component: WelcomeContainer, titleRU: "Добро пожаловать", titleEN: "Welcome" },                  // 0
+        { name: 'Warrior', component: WarriorContainer, titleRU: "Воин", titleEN: "Warrior" },                              // 1
+        { name: 'Paladin', component: PaladinContainer, titleRU: "Паладин", titleEN: "Paladin" },                           // 2
+        { name: 'Hunter', component: HunterContainer, titleRU: "Охотник", titleEN: "Hunter" },                              // 3
+        { name: 'Rogue', component: RogueContainer, titleRU: "Разбойник", titleEN: "Rogue" },                               // 4
+        { name: 'Priest', component: PriestContainer, titleRU: "Жрец", titleEN: "Priest" },                                 // 5    
+        { name: 'DeathKnight', component: DeathKnightContainer, titleRU: "Рыцарь смерти", titleEN: "Death Knight" },        // 6
+        { name: 'Shaman', component: ShamanContainer, titleRU: "Шаман", titleEN: "Shaman" },                                // 7
+        { name: 'Mage', component: MageContainer, titleRU: "Маг", titleEN: "Mage" },                                        // 8
+        { name: 'Warlock', component: WarlockContainer, titleRU: "Чернокнижник", titleEN: "Warlock" },                      // 9
+        { name: 'Error', component: ErrorContainer, titleRU: "Ошибка", titleEN: "Error" },                                  // 10
+        { name: 'Druid', component: DruidContainer, titleRU: "Друид", titleEN: "Druid" },                                   // 11
+        { name: 'About', component: AboutContainer, titleRU: "О программе", titleEN: "About" },                             // 12
+        { name: 'Documentation', component: DocumentationContainer, titleRU: "Документация", titleEN: "Documentation" },    // 13
+        { name: 'Setting', component: SettingContainer, titleRU: "Настройки", titleEN: "Setting" },                         // 14
+        { name: 'Help', component: HelpContainer, titleRU: "Помощь", titleEN: "Help" }                                      // 15
+    ];
 
-    const changeComponent = (index) => {
-        setActiveComponent(index);
-    };
+    const [activeContainer, setActiveContainer] = useState(0);
+    const [activeTab, setActiveTab] = useState(1);
+    const [selectedContainer, setSelectedContainer] = useState(0);
+    /**
+     * Массив с данными о вкладках
+     */
+    const [tabs, setTabs] = useState([]);
 
-    const ActiveComponent = components[activeComponent].component;
+    /**
+     * Функция для передачи данных из MainContainer в App
+     */
+    const mainContainerToApp = (data) => {
+        setTabs(data);
+    }
+
+    useEffect(() => {
+        // DEBUG
+        console.log("activeContainer: ", activeContainer, "activeTab: ", activeTab);
+        console.log(tabs);
+    }, [tabs]);
+
+    const GetActiveContainer = React.memo(components[activeContainer].component);
 
     return (
         <StrictMode>
             <Header currentLanguage={currentLanguage} setLanguage={setLanguage} />
             <div className="window-content">
                 <div className="pane-group">
-                    <LeftContainer currentLanguage={currentLanguage} activeComponent={activeComponent} setActiveComponent={setActiveComponent} />
+                    <LeftContainer
+                        currentLanguage={currentLanguage}
+                        activeContainer={activeContainer}
+                        setActiveContainer={setActiveContainer}
+                        activeTab={activeTab}
+                        setActiveTab={setActiveTab}
+                        setSelectedContainer={setSelectedContainer}
+                        selectedContainer={selectedContainer}
+                    />
                     <div className="pane">
-                        <MainContainer currentLanguage={currentLanguage} setLanguage={setLanguage} activeComponent={activeComponent} setActiveComponent={setActiveComponent} />
-                        <ActiveComponent />
+                        <MainContainer
+                            currentLanguage={currentLanguage}
+                            activeContainer={activeContainer} s
+                            setActiveContainer={setActiveContainer}
+                            activeTab={activeTab}
+                            setActiveTab={setActiveTab}
+                            ruTitle={components[selectedContainer].titleRU}
+                            enTitle={components[selectedContainer].titleEN}
+                            mainContainerToApp={mainContainerToApp}
+                            setSelectedContainer={setSelectedContainer}
+                            selectedContainer={selectedContainer}
+                        />
+                        <GetActiveContainer />
                     </div>
                 </div>
             </div>
@@ -73,6 +108,4 @@ const App = () => {
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
-root.render(
-    <App />
-);
+root.render(<App />);

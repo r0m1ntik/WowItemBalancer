@@ -10,7 +10,7 @@ function FooterContainer() {
     };
 
     return (
-        <footer className="toolbar toolbar-footer">
+        <footer className="toolbar toolbar-footer footerTitle">
             <h1 className="title" onClick={openLinkInBrowser}>
                 {repositoryLink} v{appVersion}
             </h1>
