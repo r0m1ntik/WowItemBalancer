@@ -12,8 +12,8 @@ function GetLanguageButton({ currentLanguage, setLanguage }) {
 
     return (
         <button className="btn btn-default pull-right" onClick={handleLanguageToggle}>
-            <span className="icon icon-text">
-                <FlagComponent title={language} />
+            <span className="lang-btn-header">
+                <FlagComponent title={language} className='flag-icon' />
             </span>
             {language}
         </button>

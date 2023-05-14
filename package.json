@@ -36,16 +36,24 @@
     "babel-loader": "^9.1.2",
     "css-loader": "^6.0.0",
     "electron": "24.3.0",
+    "eslint": "^8.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "node-loader": "^2.0.0",
     "style-loader": "^3.0.0"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "country-flag-icons": "^1.5.7",
+    "electron-router-dom": "^1.0.5",
     "electron-squirrel-startup": "^1.0.0",
     "file-loader": "^6.2.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.1",
+    "react-router-dom": "6.10.0",
     "react-tooltip": "^5.11.2"
   }
 }

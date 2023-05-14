@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { GetLocaleData } from '../../../shared/services/GetLocaleData.jsx';
 
-function MainContainer({ currentLanguage, setLanguage }) {
+function MainContainer({ currentLanguage, setLanguage, activeComponent, setActiveComponent }) {
     // Переводы
-    const data = GetLocaleData({currentLanguage});
+    const data = GetLocaleData({ currentLanguage });
 
     // Табы
     const [tabs, setTabs] = useState([]);
     // Счетчик табов
-    const [nextTabId, setNextTabId] = useState(1);
+    const [nextTabId, setNextTabId] = useState(2);
     // Активный таб
-    const [activeTabId, setActiveTabId] = useState(0);
+    const [activeTabId, setActiveTabId] = useState(1);
 
     // Добавляем таб
     const addTab = () => {
         // Создаем новый таб
-        const newTab = { id: nextTabId, title: `${data.tab} ${nextTabId}`};
+        const newTab = { id: nextTabId, title: `${data.tab} ${nextTabId}` };
         // Добавляем новый таб в массив
         setTabs([...tabs, newTab]);
         // Увеличиваем счетчик
@@ -27,7 +27,7 @@ function MainContainer({ currentLanguage, setLanguage }) {
     // Закрываем таб
     const closeTab = (id) => {
         let newActiveTabId = activeTabId;
-    
+
         setTabs(tabs.filter((tab) => {
             if (tab.id === id && tab.id === activeTabId) {
                 // Если закрываем активный таб, то активным становится таб слева
@@ -36,7 +36,7 @@ function MainContainer({ currentLanguage, setLanguage }) {
             }
             return tab.id !== id;
         }));
-    
+
         setActiveTabId(newActiveTabId);
     };
 
@@ -51,20 +51,18 @@ function MainContainer({ currentLanguage, setLanguage }) {
     // Выводим табы
     return (
         <>
-            <div className="pane">
-                <div className="tab-group">
-                    {tabs.map((tab) => (
-                        <div className={`tab-item ${tab.id === activeTabId ? 'active' : ''}`} key={tab.id}>
+            <div className="tab-group">
+                {tabs.map((tab) => (
+                    <div className={`tab-item ${tab.id === activeTabId ? 'active' : ''}`} key={tab.id}>
                         <span
                             className="icon icon-cancel icon-close-tab"
                             onClick={() => closeTab(tab.id)}
                         ></span>
-                            {tab.title}
-                        </div>
-                    ))}
-                    <div className="tab-item tab-item-fixed" onClick={addTab}>
-                        <span className="icon icon-plus"></span>
+                        {tab.title}
                     </div>
+                ))}
+                <div className="tab-item tab-item-fixed" onClick={addTab}>
+                    <span className="icon icon-plus"></span>
                 </div>
             </div>
         </>

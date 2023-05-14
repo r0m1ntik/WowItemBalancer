@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
+import { Router } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 import { GetLocaleData } from '../../../shared/services/GetLocaleData.jsx';
 import { FindClassImgById } from '../../../shared/constants/FindClassImgById.jsx';
 import { FindSpecImgById } from '../../../shared/constants/FindSpecImgById.jsx';
+import LeftMenuContainer from './LeftMenuContainer.jsx';
 
 import '../../styles/custom.css'
 
-function SearchContainer({search}) {
+function SearchContainer({ search }) {
     return (
-        <ul className="list-group" id="123">     
+        <ul className="list-group" id="123">
             <li className="list-group-header">
                 <input className="form-control" type="text" placeholder={search} />
             </li>
@@ -15,41 +19,16 @@ function SearchContainer({search}) {
     )
 }
 
-function LeftConainerButtonMenu({ currentLanguage }) {
-    const data = GetLocaleData({currentLanguage});
-    return (
-        <nav className="nav-group">
-            <h5 className="nav-group-title">{data.mainMenu}</h5>
-            <span className="nav-group-item">
-                <span className="icon icon-info"></span>
-                {data.about}
-            </span>            
-            <a className="nav-group-item active">
-                <span className="icon icon-docs"></span>
-                {data.documentation}
-            </a>
-            <span className="nav-group-item">
-                <span className="icon icon-cog"></span>
-                {data.settings}
-            </span>            
-            <span className="nav-group-item">
-                <span className="icon icon-help"></span>
-                {data.help}
-            </span>
-        </nav>
-    )
-}
-
-function LeftContainerInformation({ currentLanguage, search }) {
+function LeftContainerInformation({ currentLanguage, search, activeComponent, setActiveComponent }) {
     return (
         <>
             <SearchContainer search={search} />
-            <LeftConainerButtonMenu currentLanguage={currentLanguage} />
+            <LeftMenuContainer currentLanguage={currentLanguage} activeComponent={activeComponent} setActiveComponent={setActiveComponent} />
         </>
     )
 }
 
-function ClassItem({ id, name, specs }) {
+function ClassItem({ id, name, specs, classColor, activeComponent, setActiveComponent }) {
     // Состояние
     const [isHovered, setIsHovered] = useState(false);
 
@@ -61,6 +40,10 @@ function ClassItem({ id, name, specs }) {
     // Обработчики событий 
     const handleMouseLeave = () => {
         setIsHovered(false);
+    };
+
+    const handleSpecClick = () => {
+        setActiveComponent(id);
     };
 
     const renderSpecs = () => {
@@ -75,18 +58,21 @@ function ClassItem({ id, name, specs }) {
                             width="16"
                             height="16"
                         />
-                        <span className="spec-name">
+                        <span className="spec-name" onClick={() => handleSpecClick()}>
                             {spec.name} ({spec.id})
                         </span>
                     </div>
                 ))}
             </div>
         )
-    };   
+    };
 
     return (
         <li
             className={`list-group-item ${isHovered ? 'hovered' : ''}`}
+            style={{
+                borderRight: `4px solid ${classColor}`
+            }}
             id={name + id}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -99,21 +85,22 @@ function ClassItem({ id, name, specs }) {
                 height="18"
             />
             <div className="media-body">
-                <strong>{name}</strong>
+                <span className='class-name'>{name} ({id})</span>
                 {isHovered && renderSpecs()}
             </div>
         </li>
     );
 }
 
-function LeftContainer({ currentLanguage }) {
+function LeftContainer({ currentLanguage, activeComponent, setActiveComponent }) {
     const data = GetLocaleData({ currentLanguage });
     return (
         <div className="pane pane-sm sidebar">
-            <LeftContainerInformation currentLanguage={currentLanguage} search={data.search} />     
+            <LeftContainerInformation currentLanguage={currentLanguage} search={data.search} activeComponent={activeComponent} setActiveComponent={setActiveComponent} />
             <ul className="list-group">
                 {Object.keys(data.classes).map((classKey) => (
-                <ClassItem key={data.classes[classKey].id} name={data.classes[classKey].name} id={data.classes[classKey].id} specs={data.classes[classKey].specs} />
+                    <ClassItem key={data.classes[classKey].id} name={data.classes[classKey].name} id={data.classes[classKey].id} specs={data.classes[classKey].specs} classColor={data.classes[classKey].color}
+                        activeComponent={activeComponent} setActiveComponent={setActiveComponent} />
                 ))}
             </ul>
         </div>

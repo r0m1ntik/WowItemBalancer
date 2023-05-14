@@ -22,7 +22,6 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    display: flex;
 }
 
 .spec-icon {
@@ -30,7 +29,71 @@
 }
 
 .spec-name {
-    font-weight: bold;
+    font-weight: 350;
+    font-size: 14px;
     padding-left: 2.5px;
     cursor: pointer;
+}
+
+.class-name {
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 2.5px;
+    cursor: pointer;
+    color: #666;
+}
+
+.menu-icon-lang {
+    width: 25px;
+    height: 25px;
+    display: flex;
+}
+
+
+.lang-btn-header {
+    margin-right: 10px;
+    float: left;
+    width: 23px;
+    height: 7px;
+    margin-bottom: 0px;
+    line-height: NORMAL;
+    margin-top: 1px;
+}
+
+.flag-icon {
+    border: 0.5px solid #d6d3d3;
+    width: 26px;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.toolbar-actions {
+    margin-top: 1p;
+    margin-bottom: 1p;
+    padding-right: 3px;
+    -webkit-app-region: drag;
+}
+
+.btn {
+    font-weight: 500;
+}
+
+.btn-default {
+    color: #666;
+    font-size: 14px;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
 }
