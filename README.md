@@ -2,7 +2,7 @@
 
 [Генератор статистик для предметов на основе одного предмета, автоматически побирает статистики для остальных предметов из сета/офф сета для всех классов]
 
-[![Capture-d-e-cran-2023-05-13-a-05-05-16.png](https://i.postimg.cc/NM7JJz8f/Capture-d-e-cran-2023-05-13-a-05-05-16.png)](https://postimg.cc/DJ0Pm5Yt)
+[![Capture-d-e-cran-2023-05-14-a-03-25-26.png](https://i.postimg.cc/rshJdfC9/Capture-d-e-cran-2023-05-14-a-03-25-26.png)](https://postimg.cc/jn7NmQ1W)
 
 ## Содержание
 
