@@ -1,21 +1,23 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
-import Alert from 'react-bootstrap/Alert';
-import { Row, Col } from "react-bootstrap";
+import { useLocalStorage } from "../../../../../config/localStorage.jsx";
+import { Row, Col, Alert, CardGroup, Card, Container } from "react-bootstrap";
 
 const img1 = require("../../../../../assets/welcome/crafting.png");
 const img2 = require("../../../../../assets/welcome/shoes.png");
 const img3 = require("../../../../../assets/welcome/weapon.png");
 
 const WelcomeContainer = React.memo(() => {
+    const [count, setCount] = useLocalStorage("click", 0);
+    const handleClick = () => {
+        setCount(count + 1);
+        console.log("count: ", count);
+    };
     return (
         <div className="welcome-container">
             <Container fluid style={{ marginTop: '40px' }}>
                 <Row>
                     <Col>
-                        <Alert key='success' variant='success'>
+                        <Alert key='success' variant='success' onClick={() => handleClick()}>
                             Добро пожаловать! <br />
                         </Alert>
                     </Col>
