@@ -11,9 +11,9 @@ const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1100,
-    height: 800,
-    'min-width': 1100,
-    'min-height': 800,
+    height: 836,
+    minHeight: 836,
+    minWidth: 1100,
     icon: '../assets/icon.ico',
     title: 'WowItemBalancer',
   });

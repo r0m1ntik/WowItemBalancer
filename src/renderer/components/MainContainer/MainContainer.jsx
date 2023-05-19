@@ -37,9 +37,8 @@ function MainContainer({ currentLanguage, activeContainer, setActiveContainer, r
      * and to update the active tab when the active container changes
      */
     useEffect(() => {
-        if (tabs.length === 0) {
+        if (tabs.length === 1) {
             setNextTabId(2);
-            addTab();
             setActiveTabId(1)
             setActiveContainer(0);
         } else if (tabs.length > 0) {

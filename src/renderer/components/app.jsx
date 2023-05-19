@@ -1,5 +1,6 @@
 import React, { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from "react-dom/client";
+import { useLocalStorage } from '../../config/localStorage.jsx'
 
 import Header from './HeaderContainer/HeaderContainer.jsx';
 import LeftContainer from './LeftContainer/LeftContainer.jsx';
@@ -24,8 +25,9 @@ import SettingContainer from './MainContainer/Pages/SettingContainer/SettingCont
 import HelpContainer from './MainContainer/Pages/HelpContainer/HelpContainer.jsx';
 
 const App = () => {
+    // Получаем текущий язык
+    const [currentLanguage, setLanguage] = useLocalStorage('language', 'en');
 
-    const [currentLanguage, setLanguage] = useState('en');
     const components = [
         { name: 'Welcome', component: WelcomeContainer, titleRU: "Добро пожаловать", titleEN: "Welcome" },                  // 0
         { name: 'Warrior', component: WarriorContainer, titleRU: "Воин", titleEN: "Warrior" },                              // 1
@@ -62,8 +64,6 @@ const App = () => {
 
     useEffect(() => {
         // DEBUG
-        console.log("activeContainer: ", activeContainer, "activeTab: ", activeTab);
-        console.log(tabs);
     }, [tabs]);
 
     const GetActiveContainer = React.memo(components[activeContainer].component);
@@ -95,7 +95,7 @@ const App = () => {
                             setSelectedContainer={setSelectedContainer}
                             selectedContainer={selectedContainer}
                         />
-                        <GetActiveContainer />
+                        <GetActiveContainer currentLanguage={currentLanguage} />
                     </div>
                 </div>
             </div>

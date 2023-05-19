@@ -89,7 +89,7 @@ function ClassItem({ id, name, specs, classColor, activeContainer, setActiveCont
 }
 
 function LeftContainer({ currentLanguage, activeContainer, setActiveContainer, activeTab, setActiveTab, setSelectedContainer, selectedContainer }) {
-    const data = GetLocaleData({ currentLanguage });
+    const data = GetLocaleData(currentLanguage);
     const handleButtonClick = (id) => {
         setSelectedContainer(id);
     };

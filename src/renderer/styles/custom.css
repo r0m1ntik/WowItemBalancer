@@ -94,15 +94,22 @@
     font-size: 14px;
 }
 
-.welcome-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 95%;
+.container {
+    margin-top: 15px;
 }
 
 .footerTitle {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: -0.3em;
+}
+
+.row-class {
+    margin-left: 15px;
+    margin-right: 15px;
 }
