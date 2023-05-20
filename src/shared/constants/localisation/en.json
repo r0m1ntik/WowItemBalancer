@@ -28,10 +28,18 @@
     "ITEM_MOD_ARMOR_PENETRATION_RATING": "Armor Penetration Rating",
     "ITEM_MOD_SPELL_POWER": "Spell Power",
     "configuration_pannel": "Settings for Statistic Calculation",
+    "generate": "Generate",
+    "reset": "Reset",
     "class": "Class",
     "spec": "Spec",
     "spec_stat": "Spec Stat",
     "spec_stat_value": "Value",
+    "inventoryType": "Inventory Type",
+    "HEAD": "Head",
+    "SHOULDER": "Shoulder",
+    "CHEST": "Chest",
+    "LEGS": "Legs",
+    "HANDS": "Hands",
     "classes": [
         {
             "name": "Warrior",

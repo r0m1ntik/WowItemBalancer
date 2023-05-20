@@ -11,9 +11,11 @@ const WarriorContainer = () => {
     // Получаем название класса и id специализации
     const nameClass = data.classes[0].name;
     const specId = data.classes[0].specs;
+
+    const localStorageName = "warrior";
     // Возвращаем компонент
     return (
-        <SettingClasses data={data} lang={lang} nameClass={nameClass} specId={specId} />
+        <SettingClasses data={data} lang={lang} nameClass={nameClass} specId={specId} localStorageName={localStorageName} />
     );
 };
 

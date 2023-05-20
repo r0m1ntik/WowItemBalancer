@@ -118,7 +118,7 @@ export const GetClassStats = (specId) => {
 
     // Получить список названий статов, доступных для спека
     const getAllowedSpecsNames = (specId) => {
-        const filtered = stat_type.filter(stat => stat.allowedSpecs.includes(71));
+        const filtered = stat_type.filter(stat => stat.allowedSpecs.includes(Number(specId))).map(stat => ({ id: stat.id, name: stat.name }));
         return filtered;
     };
 
